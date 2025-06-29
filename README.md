@@ -1,74 +1,159 @@
-<!-- This is a conceptual, visually enhanced representation of the Laravel Framework README -->
+# 👤📊 UserProfile360: Modern Personal Data Dashboard 🇬🇧
+_A Laravel-based web application for managing personal data, statistics, and user profiles, featuring a modern UI, dynamic charts, and secure user authentication. Interface in English._
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PHP](https://img.shields.io/badge/PHP-%3E%3D8.2-777BB4.svg?logo=php)](https://www.php.net/)
+[![Laravel](https://img.shields.io/badge/Laravel-Framework-FF2D20.svg?logo=laravel)](https://laravel.com/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-UI%20Framework-38B2AC.svg?logo=tailwindcss)](https://tailwindcss.com/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-Data%20Viz-F5788D.svg?logo=chartdotjs)](https://www.chartjs.org/)
+
+## 📋 Table of Contents
+1. [Overview](#-overview)
+2. [Key Features](#-key-features)
+3. [Screenshots (Conceptual)](#-screenshots-conceptual)
+4. [Technology Stack & Requirements](#-technology-stack--requirements)
+5. [Local Development Setup](#️-local-development-setup)
+6. [Usage Guide](#️-usage-guide)
+7. [Project File Structure (Laravel Standard)](#️-project-file-structure-laravel-standard)
+8. [Important Notes & Considerations](#-important-notes--considerations)
+9. [Contributing](#-contributing)
+10. [License](#-license)
+11. [Contact](#-contact)
+
+## 📄 Overview
+
+**UserProfile360**, developed by Adrian Lesniak, is a modern web dashboard for managing personal data, user profiles, and statistics. Built with the **Laravel PHP framework**, it allows users to add, view, and analyze their personal information, track history, and visualize trends with interactive charts. The application features a responsive, stylish interface (Tailwind CSS), secure authentication, and a focus on user experience. All content is presented in **English**.
 
 <p align="center">
-  <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel Logo" width="150">
-  <h1>🚀 Laravel Framework 🐘</h1>
-  <p><em>An elegant PHP web application framework with expressive syntax.</em></p>
+  <img src="screenshots/dashboard-concept.png" width="75%">
 </p>
+
+## ✨ Key Features
+
+*   👤 **Personal Data Management**: Add, edit, and view your personal details (name, email, phone, city, profession, hobby, date of birth).
+*   📈 **Dynamic Statistics**: Visualize your data with real-time charts (age distribution, activity timeline, and more).
+*   🕑 **History Tracking**: See your last 10 data entries, with timestamps and quick stats.
+*   🔒 **User Authentication**: Secure registration, login, and session management (Laravel Breeze ready).
+*   🖥️ **Modern Responsive UI**: Built with Tailwind CSS and Font Awesome for a clean, mobile-friendly experience.
+*   🗂️ **Profile Dashboard**: Centralized dashboard with quick access to all features.
+*   📝 **Validation & Error Handling**: All forms include robust validation and user-friendly error messages.
+*   🌐 **English Interface**: All UI elements, messages, and documentation are in English.
+*   📊 **Interactive Charts**: Age group pie chart and activity timeline powered by Chart.js, reflecting real user data.
+*   🧑‍💻 **Author Attribution**: Footer credits Adrian Lesniak.
+
+## 🖼️ Screenshots (Conceptual)
+
+_Conceptual screenshots: dashboard, add data form, profile view, statistics page._
 
 <p align="center">
-  <!-- Conceptual badges - in a real README, these would be image links -->
-  <a href="https://github.com/laravel/framework/actions"><img src="https://img.shields.io/github/actions/workflow/status/laravel/framework/tests.yml?branch=10.x&style=for-the-badge&logo=githubactions" alt="Build Status"></a>
-  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework.svg?style=for-the-badge&logo=packagist" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework.svg?style=for-the-badge&logo=laravel" alt="Latest Stable Version"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/packagist/l/laravel/framework.svg?style=for-the-badge" alt="License"></a>
+  <img src="screenshots/dashboard-concept.png" width="300"/>
+  <img src="screenshots/form-concept.png" width="300"/>
+  <img src="screenshots/stats-concept.png" width="300"/>
 </p>
 
-## 🌟 About Laravel
+## 🛠️ Technology Stack & Requirements
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Core Technologies:
+* **Backend**: PHP >= 8.2, Laravel 10
+* **Frontend**: HTML5, Tailwind CSS, JavaScript (ES6+), Chart.js, Font Awesome
+* **Dependency Management**: Composer, npm
+* **Authentication**: Laravel Breeze (recommended)
 
-*   ⚙️ Simple, fast routing engine.
-*   💉 Powerful dependency injection container.
-*   💾 Multiple back-ends for session and cache storage.
-*   🗃️ Expressive, intuitive database ORM.
-*   🔄 Database agnostic schema migrations.
-*   ⏳ Robust background job processing.
-*   📡 Real-time event broadcasting.
+### Development Environment (Recommended):
+* **Web Server Stack**: XAMPP, WAMP, MAMP, Laragon, or built-in Laravel server
+* **IDE**: VS Code, PhpStorm, or any preferred editor
+* **Composer**: Globally installed
+* **Node.js & npm**: For frontend asset compilation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Local Assets (Standard Laravel Structure):
+* `public/`: Compiled CSS, JS, images
+* `resources/views/`: Blade templates
+* `storage/`: Logs, sessions, cached views
 
-## 📚 Learning Laravel
+## ⚙️ Local Development Setup
 
-Laravel has the most extensive and thorough **[documentation](https://laravel.com/docs)** 📖 and video tutorial library 🎞️ of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **Clone the Repository**:
+    ```bash
+    git clone <repository-url>
+    cd Zadanie2
+    ```
+2. **Install Dependencies**:
+    ```bash
+    composer install
+    npm install
+    npm run build
+    ```
+3. **Environment Configuration**:
+    * Copy `.env.example` to `.env`:
+        ```bash
+        cp .env.example .env
+        ```
+    * Generate application key:
+        ```bash
+        php artisan key:generate
+        ```
+    * (Optional) Configure database in `.env` if using authentication or persistent storage.
+4. **Database Setup** (if using authentication):
+    * Run migrations:
+        ```bash
+        php artisan migrate
+        ```
+5. **Serve the Application**:
+    ```bash
+    php artisan serve
+    ```
+    Access at [http://localhost:8000](http://localhost:8000)
 
-You may also try the **[Laravel Bootcamp](https://bootcamp.laravel.com)** 🏕️, where you will be guided through building a modern Laravel application from scratch.
+## 💡 Usage Guide
 
-If you don't feel like reading, **[Laracasts](https://laracasts.com)** 🎓 can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library!
+1. **Access the App**: Open [http://localhost:8000](http://localhost:8000) in your browser.
+2. **Register/Login**: Use the authentication system to create an account and log in.
+3. **Add Data**: Go to "Add Data" to submit your personal information.
+4. **View Profile**: See your latest data and quick stats on the profile page.
+5. **Check Statistics**: Explore the "Statistics" page for interactive charts and data analysis.
+6. **Edit or Clear History**: Manage your data entries and clear history as needed.
 
-## ❤️ Laravel Sponsors
+## 🗂️ Project File Structure (Laravel Standard)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the **[Laravel Partners program](https://partners.laravel.com)** 🤝.
+* `app/`: Controllers, Models, Providers
+* `config/`: Configuration files
+* `database/`: Migrations, factories, seeders
+* `public/`: Public assets and entry point
+* `resources/`: CSS, JS, Blade views
+* `routes/`: Web and API routes
+* `storage/`: Logs, cache, sessions
+* `tests/`: Unit and feature tests
+* `vendor/`: Composer dependencies
+* `.env`: Environment config
+* `composer.json`: Composer dependencies
+* `README.md`: This documentation
 
-### ✨ Premium Partners
+## 📝 Important Notes & Considerations
 
-*   **[Vehikl](https://vehikl.com/)**
-*   **[Tighten Co.](https://tighten.co)**
-*   **[WebReinvent](https://webreinvent.com/)**
-*   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-*   **[64 Robots](https://64robots.com)**
-*   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-*   **[Cyber-Duck](https://www.cyber-duck.co.uk)**
-*   **[DevSquad](https://devsquad.com)**
-*   **[Jump24](https://jump24.co.uk)**
-*   **[Redberry](https://redberry.international/)**
-*   **[Active Logic](https://activelogic.com)**
-*   **[byte5](https://www.byte5.de)**
-*   **[OP.GG](https://op.gg)**
-<!-- List other sponsors as they appear in the original -->
+* **English UI**: All interface elements and messages are in English.
+* **Security**: CSRF protection, password hashing, XSS prevention, and SQL injection protection via Laravel.
+* **Frontend**: Uses Tailwind CSS and Chart.js for a modern, interactive experience.
+* **Authentication**: Laravel Breeze recommended for user management.
+* **Demo Data**: If no data is present, the app will prompt you to add your first entry.
+* **Customization**: Easily extendable for more fields, analytics, or multi-user support.
 
 ## 🤝 Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the **[Laravel documentation](https://laravel.com/docs/contributions)** 📝.
+Contributions are welcome! To contribute:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/YourFeature`)
+3. Make your changes and add tests
+4. Commit and push (`git commit -m 'Feature: YourFeature'`)
+5. Open a Pull Request with a clear description
 
-## 📜 Code of Conduct
+## 📃 License
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the **[Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct)** ❤️.
+This project is licensed under the **MIT License**. See the LICENSE file for details.
 
-## 🛡️ Security Vulnerabilities
+## 📧 Contact
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via **[taylor@laravel.com](mailto:taylor@laravel.com)** 📧. All security vulnerabilities will be promptly addressed.
+Project developed by **Adrian Lesniak**
+For questions, feedback, or issues, please open an issue on GitHub or contact the author.
 
-## 📄 License
-
-The Laravel framework is open-sourced software licensed under the **[MIT license](https://opensource.org/licenses/MIT)** 📜.
+---
+🚀 _Empowering users with data-driven insights, built with Laravel and Tailwind CSS._
