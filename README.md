@@ -25,7 +25,6 @@ _A Laravel-based web application for managing personal data, statistics, and use
 **UserProfile360**, developed by Adrian Lesniak, is a modern web dashboard for managing personal data, user profiles, and statistics. Built with the **Laravel PHP framework**, it allows users to add, view, and analyze their personal information, track history, and visualize trends with interactive charts. The application features a responsive, stylish interface (Tailwind CSS), secure authentication, and a focus on user experience. All content is presented in **English**.
 
 <p align="center">
-  <img src="screenshots/1.gif" width="85%">
   <img src="screenshots/2.gif" width="85%">
 </p>
 
