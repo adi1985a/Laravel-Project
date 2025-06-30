@@ -13,8 +13,11 @@ use App\Http\Controllers\ImieNazwiskoController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ImieNazwiskoController::class, 'wyswietlImieNazwisko'])->name('home');
 
-Route::get('/wyswietl-imie-nazwisko', [ImieNazwiskoController::class, 'wyswietlImieNazwisko']);
+Route::get('/wyswietl-imie-nazwisko', [ImieNazwiskoController::class, 'wyswietlImieNazwisko'])->name('wyswietl-imie-nazwisko');
+Route::get('/formularz', [ImieNazwiskoController::class, 'formularz'])->name('formularz');
+Route::post('/zapisz-dane', [ImieNazwiskoController::class, 'zapiszDane'])->name('zapisz-dane');
+Route::get('/profil', [ImieNazwiskoController::class, 'profil'])->name('profil');
+Route::get('/statystyki', [ImieNazwiskoController::class, 'statystyki'])->name('statystyki');
+Route::post('/wyczysc-historie', [ImieNazwiskoController::class, 'wyczyscHistorie'])->name('wyczysc-historie');
